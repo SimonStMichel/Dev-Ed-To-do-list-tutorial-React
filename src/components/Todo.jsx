@@ -2,10 +2,14 @@ import React from "react";
 
 const Todo = ({ todo, text, todos, setTodos }) => {
 
+    // Functions
+
+    // Deletes the todo when user clicks on the trash icon
     const deleteHandler = () => {
         setTodos(todos.filter((el) => el.id !== todo.id));
     };
 
+    // Marks as completed or uncompleted when user clicks on the checkmark icon
     const completeHandler = () => {
         setTodos(todos.map(item => {
             if (item.id === todo.id) {
